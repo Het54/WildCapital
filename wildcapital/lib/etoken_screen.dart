@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kiteflux/Position/position_screen.dart';
-import 'package:kiteflux/home_screen.dart';
-import 'package:kiteflux/kiteconnect.dart';
+import 'package:wildcapital/home_screen.dart';
+import 'package:wildcapital/kiteconnect.dart';
 
 class Etoken extends StatefulWidget {
   const Etoken({Key? key}) : super(key: key);
