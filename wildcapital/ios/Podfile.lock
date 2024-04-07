@@ -1,4 +1,7 @@
 PODS:
+  - awesome_notifications (0.9.3):
+    - Flutter
+    - IosAwnCore (~> 0.9.3)
   - Firebase/CoreOnly (10.22.0):
     - FirebaseCore (= 10.22.0)
   - Firebase/Database (10.22.0):
@@ -34,10 +37,12 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.13.0)":
     - GoogleUtilities/Privacy
   - GoogleUtilities/Privacy (7.13.0)
+  - IosAwnCore (0.9.3)
   - leveldb-library (1.22.4)
   - PromisesObjC (2.4.0)
 
 DEPENDENCIES:
+  - awesome_notifications (from `.symlinks/plugins/awesome_notifications/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_database (from `.symlinks/plugins/firebase_database/ios`)
   - Flutter (from `Flutter`)
@@ -51,10 +56,13 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseSharedSwift
     - GoogleUtilities
+    - IosAwnCore
     - leveldb-library
     - PromisesObjC
 
 EXTERNAL SOURCES:
+  awesome_notifications:
+    :path: ".symlinks/plugins/awesome_notifications/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
   firebase_database:
@@ -63,6 +71,7 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
+  awesome_notifications: 66d28ab7174ca2823b04d275cb043e0a4a3eb9cf
   Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
   firebase_core: 100945864b4aedce3cfef0c62ab864858bf013cf
   firebase_database: d2b693328f0cf71c8726a8516463bcfbeebc5c6f
@@ -73,9 +82,10 @@ SPEC CHECKSUMS:
   FirebaseSharedSwift: c92645b392db3c41a83a0aa967de16f8bad25568
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
+  IosAwnCore: b8601fbb37f7b3560f31b84ebf55a72f65812e05
   leveldb-library: 06a69cc7582d64b29424a63e085e683cc188230a
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: d670bdf356e5ab23f20ce7b62d47122b5d01bf3a
 
 COCOAPODS: 1.14.3

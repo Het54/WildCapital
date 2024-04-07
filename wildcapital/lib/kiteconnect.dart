@@ -123,7 +123,45 @@ class kiteconnect {
 
     if (response.statusCode == 200) {
       // Check if the response status code is OK (200)
-      var positions = json.decode(response.body);
+      // var positions = json.decode(response.body);
+      var positions = {
+          "status": "success",
+          "data": {
+              "net": [
+                  {
+                      "tradingsymbol": "BANKNIFTY2441048500CE",
+                      "exchange": "NFO",
+                      "instrument_token": 53496327,
+                      "product": "MIS",
+                      "quantity": 15,
+                      "overnight_quantity": 0,
+                      "multiplier": 1000,
+                      "average_price": 348.1,
+                      "close_price": 0,
+                      "last_price": 348.1,
+                      "value": -161050,
+                      "pnl": 0,
+                      "m2m": 0,
+                      "unrealised": 0,
+                      "realised": 0,
+                      "buy_quantity": 15,
+                      "buy_price": 288.50,
+                      "buy_value": 161050,
+                      "buy_m2m": 161050,
+                      "sell_quantity": 0,
+                      "sell_price": 0,
+                      "sell_value": 0,
+                      "sell_m2m": 0,
+                      "day_buy_quantity": 15,
+                      "day_buy_price": 288.50,
+                      "day_buy_value": 161050,
+                      "day_sell_quantity": 0,
+                      "day_sell_price": 0,
+                      "day_sell_value": 0
+                  },
+              ]
+          }
+      };
       return positions;
     } else {
       throw Exception('Failed to load positions');

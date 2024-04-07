@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'dart:convert';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:wildcapital/kiteconnect.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:http/http.dart' as http;
 
 
 class order_screen extends StatefulWidget {
@@ -86,6 +89,28 @@ class order_screenState extends State<order_screen> {
     
   }
 
+  triggerNotification_for_position(){
+    print("inside function");
+    AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 1, 
+        channelKey: 'basic_channel',
+        title: 'Target Hit',
+        body: 'Current position is been executed',
+        ));
+  }
+
+  triggerNotification_for_watchlist(){
+    print("inside function");
+    AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 1, 
+        channelKey: 'basic_channel',
+        title: 'Trigger Price Hit',
+        body: 'Position is been executed',
+        ));
+  }
+
 
 
   get_last_price_position() async {
@@ -117,12 +142,24 @@ class order_screenState extends State<order_screen> {
       
         if(op_type == 'CE'){
           final periodicTimer = Timer.periodic(const Duration(milliseconds: 500), (timer) async {
-            var index_lp = await kite.ltp(result);
-            indexlp = index_lp[result]['last_price'];
+            // var index_lp = await kite.ltp(result);
+            // print(index_lp);
+            // indexlp = index_lp[result]['last_price'];
+
+            //For testing purpose
+            var request = http.Request('GET', Uri.parse('http://127.0.0.1:5000/data'));
+
+
+            http.StreamedResponse response = await request.send();
+            var string  = await response.stream.bytesToString();
+            indexlp = double.parse(string);
+            // print(indexlp);
+            
             setState(() {
             });
             if(indexlp>=targetPrice || indexlp<=stoplossPrice){
-              sell_order(tradingsymbol, quantity, productType);
+              triggerNotification_for_position();
+              // sell_order(tradingsymbol, quantity, productType);
               timer.cancel();
             }              
             },
@@ -213,12 +250,23 @@ class order_screenState extends State<order_screen> {
       if(op_type == 'CE'){
         if(posType == 'Buy'){
             Timer.periodic(const Duration(milliseconds: 500), (timer) async {
-            var index_lp = await kite.ltp(result);
-            indexlp = index_lp[result]['last_price'];
+            // var index_lp = await kite.ltp(result);
+            // indexlp = index_lp[result]['last_price'];
+
+            //For testing purpose
+            var request = http.Request('GET', Uri.parse('http://127.0.0.1:5000/data'));
+
+
+            http.StreamedResponse response = await request.send();
+            var string  = await response.stream.bytesToString();
+            indexlp = double.parse(string);
+
+
             setState(() {
             });
             if(indexlp>triggerPrice){
-              buy_order(tradingsymbol, quantity, productType);
+              // buy_order(tradingsymbol, quantity, productType);
+              triggerNotification_for_watchlist();
               timer.cancel();
             }              
             },
