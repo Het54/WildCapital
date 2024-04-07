@@ -112,9 +112,9 @@ class position_screenState extends State<position_screen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image.asset(
-              //     'ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
-              const Text('wildcapital'),
+              Image.asset(
+                  'ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
+              const Text('KiteFlux'),
             ],
           ),
         ),

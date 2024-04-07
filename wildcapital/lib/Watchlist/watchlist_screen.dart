@@ -91,9 +91,9 @@ class watchlist_screenState extends State<watchlist_screen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image.asset(
-              //     'ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
-              const Text('wildcapital'),
+              Image.asset(
+                  'ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
+              const Text('KiteFlux'),
             ],
           ),
         ),

@@ -35,8 +35,8 @@ class EtokenState extends State<Etoken> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
-            const Text('WildCapital'),
+            Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'),
+            const Text('KiteFlux'),
           ],
         ),
       ),

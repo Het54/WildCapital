@@ -359,8 +359,8 @@ class order_screenState extends State<order_screen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
-              // Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'), 
-              const Text('WildCapital'),
+              Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'), 
+              const Text('KiteFlux'),
             ],
           ),
         ),

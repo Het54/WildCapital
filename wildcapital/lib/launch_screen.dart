@@ -36,8 +36,13 @@ class launch_screenState extends State<launch_screen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                'lib/Images/playstore.png',
+                width: 200, // Adjust width as needed
+                height: 150, // Adjust height as needed
+              ),
               Text(
-                  'WildCapital',
+                  'KiteFlux',
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
