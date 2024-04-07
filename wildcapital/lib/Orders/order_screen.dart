@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:wildcapital/kiteconnect.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 
 class order_screen extends StatefulWidget {
@@ -36,6 +37,7 @@ class order_screenState extends State<order_screen> {
   var indexlp;
   late Timer timer;
   List<dynamic> OrderList = [];
+  // DatabaseReference ref = FirebaseDatabase.instance.ref();
 
   @override
   void initState() {
@@ -299,8 +301,8 @@ class order_screenState extends State<order_screen> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
-              Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'), 
-              const Text('KiteFlux'),
+              // Image.asset('ios/Runner/Assets.xcassets/AppIcon.appiconset/50.png'), 
+              const Text('WildCapital'),
             ],
           ),
         ),

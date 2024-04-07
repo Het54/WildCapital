@@ -134,6 +134,7 @@ class kiteconnect {
     var response = await session
         .get(Uri.parse('$rootUrl/quote/ltp?i=$instruments'), headers: headers);
     var data = json.decode(response.body)["data"];
+    print(data);
     return data;
   }
 
