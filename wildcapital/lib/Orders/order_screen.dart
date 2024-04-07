@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:convert';
+import 'dart:math';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:wildcapital/kiteconnect.dart';
@@ -40,11 +40,16 @@ class order_screenState extends State<order_screen> {
   var indexlp;
   late Timer timer;
   List<dynamic> OrderList = [];
-  // DatabaseReference ref = FirebaseDatabase.instance.ref();
+  DatabaseReference ref = FirebaseDatabase.instance.ref("users/het");
+  Random random = Random();
+  
+
+
 
   @override
   void initState() {
     super.initState();
+  
     identifier = widget.identifier;
     enctoken = widget.enctoken;
     triggerPrice = widget.triggerPrice;
@@ -160,6 +165,11 @@ class order_screenState extends State<order_screen> {
             if(indexlp>=targetPrice || indexlp<=stoplossPrice){
               triggerNotification_for_position();
               // sell_order(tradingsymbol, quantity, productType);
+              int randomNumber = random.nextInt(100);
+              ref.set({
+                "order_id": randomNumber,
+                "Position_status": "Target Hit",
+              });
               timer.cancel();
             }              
             },

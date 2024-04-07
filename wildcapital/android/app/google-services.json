@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "791062289580",
+    "firebase_url": "https://wildcapital-6a6a5-default-rtdb.firebaseio.com",
+    "project_id": "wildcapital-6a6a5",
+    "storage_bucket": "wildcapital-6a6a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791062289580:android:17bd447bb88bedc0cc1309",
+        "android_client_info": {
+          "package_name": "com.example.wildcapital"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfqR3LWuXdOr8hp-NfEv5IJ30Jvwrmh-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
