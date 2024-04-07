@@ -24,3 +24,43 @@ def get_data():
 # Start the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+positionData = {
+    "status": "success",
+    "data": {
+        "net": [
+            {
+                "tradingsymbol": "LEADMINI17DECFUT",
+                "exchange": "MCX",
+                "instrument_token": 53496327,
+                "product": "NRML",
+                "quantity": 1,
+                "overnight_quantity": 0,
+                "multiplier": 1000,
+                "average_price": 161.05,
+                "close_price": 0,
+                "last_price": 161.05,
+                "value": -161050,
+                "pnl": 0,
+                "m2m": 0,
+                "unrealised": 0,
+                "realised": 0,
+                "buy_quantity": 1,
+                "buy_price": 161.05,
+                "buy_value": 161050,
+                "buy_m2m": 161050,
+                "sell_quantity": 0,
+                "sell_price": 0,
+                "sell_value": 0,
+                "sell_m2m": 0,
+                "day_buy_quantity": 1,
+                "day_buy_price": 161.05,
+                "day_buy_value": 161050,
+                "day_sell_quantity": 0,
+                "day_sell_price": 0,
+                "day_sell_value": 0
+            },
+        ]
+    }
+}
